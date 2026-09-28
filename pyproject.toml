@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meridian-inverse-design"
+version = "1.0.0"
+description = "MERIDIAN: active-learning latent optimisation for target-driven inverse design, with the Co-PiLOT closed loop (generative decoder + orientation codec + DAMASK crystal plasticity)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mahish K. Guru" }]
+keywords = ["bayesian optimization", "inverse design", "latent space optimization", "crystal plasticity", "DAMASK", "magnesium", "microstructure"]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "pyyaml>=6.0",
+    "tqdm>=4.65",
+    "Pillow>=10.0",
+    "torch>=2.1",
+    "botorch>=0.10,<0.11",
+    "gpytorch>=1.11,<1.12",
+]
+
+[project.optional-dependencies]
+# closed-loop inverse design: decoder -> codec -> DAMASK
+pipeline = [
+    "orientation-codec @ git+https://github.com/mahishguru/orientation-codec.git",
+    "microstructure-encoder-decoder[eval] @ git+https://github.com/mahishguru/microstructure-encoder-decoder.git",
+    "damask>=3.0.2",
+    "h5py>=3.8",
+    "scikit-image>=0.21",
+    "vtk>=9.0",
+]
+dev = ["pytest>=7"]
+
+[project.scripts]
+meridian-run = "meridian.cli:run_experiment"
+meridian-ablation = "meridian.cli:run_ablation"
+
+[project.urls]
+Repository = "https://github.com/mahishguru/meridian"
+
+[tool.setuptools.packages.find]
+include = ["meridian*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--ignore=tests/test_damask_e2e.py --ignore=tests/test_real_image_e2e.py"

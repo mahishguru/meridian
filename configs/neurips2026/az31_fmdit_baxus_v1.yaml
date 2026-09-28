@@ -1,0 +1,226 @@
+# Co-PiLOT — DANTE on AZ31 with FMDiT decoder + cached encoder seeds.
+#
+# Inherits everything from base.yaml; this file just pins the knobs needed for
+# the first end-to-end DANTE test.
+
+experiment:
+  # Each ablation cell lands in `results/<experiment.name>/` so distinct names →
+  # distinct directories (used by run_ablation.py below).
+  name: "ablation/AZ31__fmdit__baxus__v1__r0"
+  seed: 42
+  output_dir: "results"
+  device: "cuda"
+
+latent:
+  dim: 512
+  bounds: [-4.0, 4.0]
+  use_box_constraint: true
+  use_physics_penalty: false
+  init:
+    # Seed initialisation is bypassed because we use loop.seed_cache below.
+    mode: "from_class"
+    n_seed: 100
+    seeds_dir: "assets/latent_seeds"
+    class_key: "AZ31_extruded"
+
+decoder:
+  name: "fmdit"
+  num_inference_steps: 30
+  image_size: 512
+  fmdit:
+    checkpoint: "${MSED_ROOT}/checkpoints/neurips2026/fmdit_512.pth"
+    sd35_model_id: "stabilityai/stable-diffusion-3.5-medium"
+    decode_batch_size: 2
+
+codec:
+  class_means_json: "assets/class_means.json"
+  class_key: "AZ31_extruded"
+  template_dream3d: null
+  # FM-DiT outputs are blurry/smooth with pixel-level speckle. The default
+  # connected-components colour-tol segmentation collapses to either ~1 grain
+  # or ~30k single-pixel grains. "smart" runs:
+  #   PIL median filter -> PIL.quantize(MEDIANCUT) -> per-colour CC ->
+  #   drop tiny grains and Voronoi-fill from surviving large grains.
+  # Verified by side-by-side compare on FM-DiT iter1 (512x512): 16:9:200
+  # gives ~107 grains with clean boundaries (vs 175 over-segmented at 32:5:50).
+  # Format: "smart" (defaults 32:5:50) or "smart:NCOL:MED:MIN".
+  colour_tol: "sam:32:0.86:200"   # SAM ViT-B AMG: pps=32, iou=0.86, min_area=200 (organic boundaries, faithful to source)
+  spacing: [2.0, 2.0, 2.0]   # 300x300 @ 2µm = 600µm domain (matches AZ31_extruded RVEs)
+  # Representativeness floor: reject (treat as -inf) any RVE with fewer
+  # grains than this. The DAMASK constitutive law is grain-size-insensitive,
+  # so a few large grains give texture-fluke responses that the optimizer
+  # would otherwise exploit (mode-collapse to ~10-grain microstructures).
+  min_grains: 40
+  min_pixel_std: 28.0   # reject decoded PNGs with mean per-channel std below this (blank / blob regime)
+  target_size: 300              # NEAREST-downsample FM-DiT 512x512 -> 300x300 to match seed-cache pipeline
+
+simulation:
+  load_yaml:  "simulations/load.yaml"
+  phase_yaml: "simulations/AZ31_Phenopower.yaml"
+  # Must be null: when set, _find_template_dream3d_optional() globs this dir
+  # and silently switches the codec into template mode (morphology fixed to
+  # the template's FeatureIds). That collapses every batch member's dream3d
+  # to identical Grain Data, regardless of the decoded PNG.
+  geometries_dir: null
+  target_phase: "AZ31"
+  target_homog: "SX"
+  damask_binary: "DAMASK_grid"
+  n_threads: 8
+  parallel_batch: 4
+  loading_direction: "x"
+  cleanup_hdf5: true
+  fail_on_simulation_error: false
+  timeout_seconds: 7200
+
+extraction:
+  youngs_strain_max: 0.001
+  yield_tolerance: 0.4
+
+objective:
+  name: "v1"
+  v1:
+    sigma_y_ref: 250.0
+    toughness_ref: 50.0
+    alpha: 1.0
+    beta: 1.0
+    # Clean benchmark v1: use plastic work up to UTS instead of the
+    # weakly varying legacy sigma_u*epsilon_uniform term.
+    work_key: ""  # force sigma_u*epsilon_uniform (matches rescored benchmark data)
+    sigma_u_ref: 315.0
+    gamma: 0.25
+    n_min: 0.10
+    lambda_n: 5.0
+    # Representativeness penalty (soft, on top of the hard codec.min_grains
+    # floor): -lambda_g * relu((g_min - n_grains)/g_min). With g_min=40 and
+    # lambda_g=1.0 a 20-grain RVE loses 0.5 from its score (~50% of a typical
+    # objective value), so even if a sim sneaks past the codec floor it can't
+    # win. Set lambda_g=0 to disable.
+    g_min: 0
+    lambda_g: 0.0
+    g_max: 0
+    lambda_g_hi: 0.0
+
+  # V2 (target-driven, codec-reachable). Use config/az31_*_v2.yaml to activate.
+  # Same representativeness penalty as V1: a successful target-match must
+  # also be backed by a well-resolved RVE.
+  v2:
+    targets:
+      sigma_y: 160.0    # MPa  (reachable AZ31 frontier target)
+      n: 0.302          # reachable hardening target
+      K: 604.0          # MPa  (reachable frontier target)
+      sigma_u: 316.0    # MPa  (reachable frontier target)
+    weights:
+      sigma_y: 1.0
+      n: 10.0           # enough to matter without dominating distance
+      K: 0.5
+      sigma_u: 1.0
+    g_min: 0
+    lambda_g: 0.0
+    g_max: 0
+    lambda_g_hi: 0.0
+
+optimizer:
+  name: "baxus"
+  batch_size: 4
+  dante:
+    surrogate_hidden: [1024, 512, 256]
+    surrogate_lr: 1.0e-3
+    surrogate_epochs: 200
+    surrogate_batch_size: 32
+    surrogate_dropout: 0.1
+    surrogate_weight_decay: 1.0e-4
+    val_split: 0.1
+    early_stop_patience: 20
+    n_rollouts: 200
+    n_leaves_per_expand: 16
+    # Encoded seed latents have per-dim std ~0.9 and L2 norm ~21 in 512-D.
+    # sigma=0.05 -> ||dz||~1.1, stays safely on the FM-DiT manifold.
+    # sigma=0.30 -> ||dz||~6.8 -> garbage decoded images.
+    # Combined with codec colour_tol=16, sigma=0.05 produces 3 distinct
+    # microstructures per batch (verified offline). Increase only if
+    # exploration looks too local after several iterations.
+    sigma_init: 0.05
+    sigma_decay: 0.995
+    c0: 0.1
+    rho_smoothing: 0.5
+
+  # ---- alternative optimizers (used when --only turbo|baxus|meridian) ----
+  turbo:
+    n_init: 0
+    length_init: 0.8
+    length_min: 0.5e-2
+    length_max: 1.6
+    success_tolerance: 3
+    failure_tolerance_factor: 1.5
+    failure_tolerance_max: 8        # NeurIPS guardrail: makes published TR restart reachable in d=512 budget
+    acquisition: "ts"
+    n_candidates: 5000
+
+  baxus:
+    initial_target_dim: 128
+    n_init: 0
+    length_init: 0.8
+    length_min: 0.5e-2
+    length_max: 1.6
+    success_tolerance: 3
+    failure_tolerance_factor: 1.5
+    failure_tolerance_max: 8        # NeurIPS guardrail: makes published TR restart reachable in d=512 budget
+    acquisition: "ts"
+
+  meridian:
+    feature_hidden: [512, 128]
+    feature_dim: 16
+    surrogate_lr: 1.0e-3
+    surrogate_epochs: 200
+    surrogate_weight_decay: 1.0e-4
+    subspace_energy: 0.95
+    subspace_k_min: 8
+    subspace_k_max: 24
+    pca_warmstart_rounds: 3
+    L_init: 0.8
+    L_min: 0.5e-2
+    L_max: 1.6
+    success_tolerance: 3
+    failure_tolerance_factor: 1.0
+    failure_tolerance_max: 8   # cap so TR can shrink/restart in high-d
+    max_restarts: 3
+    sobol_cloud: 4096
+    dpp_pool: 256
+
+loop:
+  n_iterations: 40
+  # Patch: exclude soft-penalty rejects from the GP/DNN surrogate fit.
+  mask_failed_from_surrogate: true
+  checkpoint_every: 1
+  log_every: 1
+  dry_run: false
+  # Pre-encoded 100-run cache (Z, Y, success) — every optimizer starts here.
+  seed_cache: "data/seed_caches/seed_cache_AZ31_v1_fmdit.npz"
+  resume_checkpoint: null
+  # Anchor microstructure: pin the optimizer's starting center to the latent
+  # of sim_449 (a known well-resolved ~140-grain AZ31 RVE from the runs/
+  # corpus). Same anchor is used for DANTE and MERIDIAN so the comparison
+  # is fair (any drift away from it is purely the optimizer's choice).
+  initial_seed:
+    # Data-driven anchor: pick the highest-Y entry whose decoded RVE has
+    # n_grains in [band_lo, band_hi). Falls back to global top_y if empty.
+    criterion: band_top_y
+    band_lo: 80
+    band_hi: 350
+
+  # Drop catastrophic speckle / blob outliers (n_grains outside [40, 700])
+  # from the seed cache before warm-starting the surrogate. With the upper-band
+  # penalty active these entries score around -5 to -6, which is fine, but
+  # they still pollute local surrogate fits around the in-band anchor.
+  cache_filter:
+    enabled: false
+    keep_g_min: 40
+    keep_g_max: 700
+
+# The 4-optimizer × 1-decoder × 2-objective grid is materialised by
+# scripts/run_ablation.py; ablation block kept here for reference.
+ablation:
+  decoders:   ["fmdit"]
+  optimizers: ["dante", "turbo", "baxus", "meridian"]
+  objectives: ["v1", "v2"]
+  n_repeats: 1

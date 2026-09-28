@@ -1,0 +1,298 @@
+# Co-PiLOT — DANTE on AZ31 with FMDiT decoder + cached encoder seeds.
+#
+# Inherits everything from base.yaml; this file just pins the knobs needed for
+# the first end-to-end DANTE test.
+
+experiment:
+  # Each ablation cell lands in `results/<experiment.name>/` so distinct names →
+  # distinct directories (used by run_ablation.py below).
+  name: "ablation/AZ31__fmdit_768__meridian__v2__r0"
+  seed: 42
+  output_dir: "results"
+  device: "cuda"
+
+latent:
+  dim: 768
+  bounds: [-4.0, 4.0]  # wide-d: must contain encoded data range (~[-3.6, 4.2])
+  use_box_constraint: true
+  use_physics_penalty: false
+  init:
+    # Seed initialisation is bypassed because we use loop.seed_cache below.
+    mode: "from_class"
+    n_seed: 100
+    seeds_dir: "assets/latent_seeds"
+    class_key: "AZ31_extruded"
+
+decoder:
+  name: "fmdit_768"
+  num_inference_steps: 30
+  image_size: 512
+  fmdit:
+    checkpoint: "${MSED_ROOT}/checkpoints/neurips2026/fmdit_768.pth"
+    target_dim: 768
+    sd35_model_id: "stabilityai/stable-diffusion-3.5-medium"
+    decode_batch_size: 2
+
+codec:
+  class_means_json: "assets/class_means.json"
+  class_key: "AZ31_extruded"
+  template_dream3d: null
+  # FM-DiT outputs are blurry/smooth with pixel-level speckle. The default
+  # connected-components colour-tol segmentation collapses to either ~1 grain
+  # or ~30k single-pixel grains. "smart" runs:
+  #   PIL median filter -> PIL.quantize(MEDIANCUT) -> per-colour CC ->
+  #   drop tiny grains and Voronoi-fill from surviving large grains.
+  # Verified by side-by-side compare on FM-DiT iter1 (512x512): 16:9:200
+  # gives ~107 grains with clean boundaries (vs 175 over-segmented at 32:5:50).
+  # Format: "smart" (defaults 32:5:50) or "smart:NCOL:MED:MIN".
+  colour_tol: "sam:32:0.86:200"   # SAM ViT-B AMG: pps=32, iou=0.86, min_area=200 (organic boundaries, faithful to source)
+  spacing: [2.0, 2.0, 2.0]   # 300x300 @ 2µm = 600µm domain (matches AZ31_extruded RVEs)
+  # Representativeness floor: reject (treat as -inf) any RVE with fewer
+  # grains than this. The DAMASK constitutive law is grain-size-insensitive,
+  # so a few large grains give texture-fluke responses that the optimizer
+  # would otherwise exploit (mode-collapse to ~10-grain microstructures).
+  min_grains: 40
+  min_pixel_std: 5.0   # reject decoded PNGs with mean per-channel std below this (blank / blob regime)
+  target_size: 300              # NEAREST-downsample FM-DiT 512x512 -> 300x300 to match seed-cache pipeline
+
+simulation:
+  load_yaml:  "simulations/load.yaml"
+  phase_yaml: "simulations/AZ31_Phenopower.yaml"
+  # Must be null: when set, _find_template_dream3d_optional() globs this dir
+  # and silently switches the codec into template mode (morphology fixed to
+  # the template's FeatureIds). That collapses every batch member's dream3d
+  # to identical Grain Data, regardless of the decoded PNG.
+  geometries_dir: null
+  target_phase: "AZ31"
+  target_homog: "SX"
+  damask_binary: "DAMASK_grid"
+  n_threads: 8
+  parallel_batch: 4
+  loading_direction: "x"
+  cleanup_hdf5: true
+  fail_on_simulation_error: false
+  timeout_seconds: 7200
+
+extraction:
+  youngs_strain_max: 0.001
+  yield_tolerance: 0.4
+
+objective:
+  name: "v2"
+  v1:
+    sigma_y_ref: 250.0
+    toughness_ref: 50.0
+    alpha: 1.0
+    beta: 1.0
+    # Clean benchmark v1: use plastic work up to UTS instead of the
+    # weakly varying legacy sigma_u*epsilon_uniform term.
+    work_key: ""  # force sigma_u*epsilon_uniform (matches rescored benchmark data)
+    sigma_u_ref: 315.0
+    gamma: 0.25
+    n_min: 0.10
+    lambda_n: 5.0
+    # Representativeness penalty (soft, on top of the hard codec.min_grains
+    # floor): -lambda_g * relu((g_min - n_grains)/g_min). With g_min=40 and
+    # lambda_g=1.0 a 20-grain RVE loses 0.5 from its score (~50% of a typical
+    # objective value), so even if a sim sneaks past the codec floor it can't
+    # win. Set lambda_g=0 to disable.
+    g_min: 0
+    lambda_g: 0.0
+    g_max: 0
+    lambda_g_hi: 0.0
+
+  # V2 (target-driven, codec-reachable). objective.name=v2 selects this block.
+  # Same representativeness penalty as V1: a successful target-match must
+  # also be backed by a well-resolved RVE.
+  v2:
+    targets:
+      sigma_y: 180.0    # MPa  (original benchmark target)
+      n: 0.30           # original benchmark target
+      K: 580.0          # MPa  (original benchmark target)
+      sigma_u: 330.0    # MPa  (original benchmark target)
+    weights:
+      sigma_y: 1.0
+      n: 5.0            # original benchmark weight
+      K: 0.5
+      sigma_u: 1.0
+    g_min: 0
+    lambda_g: 0.0
+    g_max: 0
+    lambda_g_hi: 0.0
+
+optimizer:
+  name: "meridian"
+  batch_size: 4
+  dante:
+    surrogate_hidden: [1024, 512, 256]
+    surrogate_lr: 1.0e-3
+    surrogate_epochs: 200
+    surrogate_batch_size: 32
+    surrogate_dropout: 0.1
+    surrogate_weight_decay: 1.0e-4
+    val_split: 0.1
+    early_stop_patience: 20
+    n_rollouts: 50  # wide-d: cap cumulative MCTS root-promotion drift
+    n_leaves_per_expand: 16
+    # Encoded seed latents have per-dim std ~0.9 and L2 norm ~21 in 512-D.
+    # sigma=0.05 -> ||dz||~1.1, stays safely on the FM-DiT manifold.
+    # sigma=0.30 -> ||dz||~6.8 -> garbage decoded images.
+    # Combined with codec colour_tol=16, sigma=0.05 produces 3 distinct
+    # microstructures per batch (verified offline). Increase only if
+    # exploration looks too local after several iterations.
+    sigma_init: 0.0102062  # extra/4.0x shrink for wide-d (was 0.04082)
+    sigma_decay: 0.97  # wide-d: accelerate decay to keep MCTS rollouts on-manifold
+    c0: 0.1
+    rho_smoothing: 0.5
+
+  # ---- alternative optimizers (used when --only turbo|baxus|meridian) ----
+  turbo:
+    n_init: 0
+    length_init: 0.163299  # extra/4.0x shrink for wide-d (was 0.6532)
+    length_min: 0.00102062  # extra/4.0x shrink for wide-d (was 0.004082)
+    length_max: 0.163299  # extra/4.0x shrink for wide-d (was 0.6532)
+    success_tolerance: 3
+    failure_tolerance_factor: 1.5
+    failure_tolerance_max: 8        # NeurIPS guardrail: makes published TR restart reachable in d=512 budget
+    acquisition: "ts"
+    n_candidates: 5000
+
+  baxus:
+    initial_target_dim: 10
+    n_init: 0
+    length_init: 0.163299  # extra/4.0x shrink for wide-d (was 0.6532)
+    length_min: 0.00102062  # extra/4.0x shrink for wide-d (was 0.004082)
+    length_max: 0.163299  # extra/4.0x shrink for wide-d (was 0.6532)
+    success_tolerance: 3
+    failure_tolerance_factor: 1.5
+    failure_tolerance_max: 8        # NeurIPS guardrail: makes published TR restart reachable in d=512 budget
+    acquisition: "ts"
+
+  meridian:
+    feature_hidden: [512, 128]
+    feature_dim: 16
+    surrogate_lr: 1.0e-3
+    surrogate_epochs: 200
+    surrogate_weight_decay: 1.0e-4
+    subspace_energy: 0.95
+    subspace_k_min: 8
+    subspace_k_max: 24
+    pca_warmstart_rounds: 3
+    L_init: 0.65  # v5 wide-d (UP from 0.163, basin needs 1-2 unit steps)
+    L_min: 0.04  # v5 wide-d
+    L_max: 1.30  # v5 wide-d
+    success_tolerance: 3
+    failure_tolerance_factor: 0.75  # v6: shrink TR sooner (was 1.5)
+    failure_tolerance_max: 8   # cap so TR can shrink/restart in high-d
+    max_restarts: 3
+    sobol_cloud: 4096
+    dpp_pool: 256  # v6: broader diverse selection
+    # Manifold-tangent TR: keep candidates on the encoded-real shell
+    # (||z|| stats from the rescored seed cache for fmdit).
+    shell_radius_min: 27.4  # wide-768: match encoded shell radius ~27.55 (was 22.0 for 512-D)
+    shell_radius_max: 27.7  # wide-768: match encoded shell radius ~27.55 (was 22.2 for 512-D)
+    adaptive_shell: true
+    shell_k_sigma: 1.5  # v7: robust on-shell band; prevents shell blow-out
+    shell_exempt_frac: 0.05  # v7: keep a small off-shell scout quota
+    shell_max_width: 3.0  # v7: median-centered cap on adaptive shell width
+
+    # ---- A2/A3: property-space acquisition (architectural extension) ----
+    # Trains heteroscedastic auxiliary heads on phi(z) for each target
+    # property and replaces qLogNEI with Monte-Carlo EI in property space.
+    use_property_acquisition: true
+    property_keys: ["sigma_y", "sigma_u", "n", "K", "n_grains"]
+    property_acq_g_min: 40
+    property_acq_lambda_g: 1.0
+    property_acq_g_max: 350
+    property_acq_lambda_g_hi: 1.0
+    property_acq_mc_samples: 64
+
+    # ---- MERIDIAN-v2 (A1+A4+A4DPP+A5+A6) ---------------------------------
+    # Behind a single flag so we can A/B test against vanilla MERIDIAN.
+    use_meridian_v2: true
+    plateau_K: 8  # v7: less eager restarts after y* tracking fix
+    plateau_max_restarts: 2  # v7: cap plateau restarts; preserve learning budget
+    restart_strategy: mcts       # "mcts" (A6) | "class_pool" (legacy A1)
+    head_reset_every: 10  # v6: re-enable head reset on saturated cache
+    gradient_seed_enabled: true  # A4: replace batch[3] with property-gradient seed
+    # A4 gradient-seed knobs
+    gs_n_candidates: 32
+    gs_n_steps: 20
+    gs_lr: 0.05
+    gs_grad_clip: 1.0
+    gs_feas_min: 0.3
+    # A4-DPP hybrid kernel: blend in raw-z RBF when phi-space collapses
+    dpp_z_kernel_weight: 0.05  # v5: less anti-correlation
+    dpp_z_kernel_lengthscale: 1.0
+    # A2: raw-unit sigma floor for property heads (fraction of |target - mu|)
+    property_sigma_floor_frac: 0.10
+    # v7: acquisition-only reachable-property prior from cache-beating runs;
+    # the objective itself is unchanged.
+    property_reachable_prior:
+      enabled: true
+      weight: 0.25
+      bands:
+        sigma_y: [154.0, 160.0]
+        sigma_u: [310.0, 316.0]
+        n: [0.300, 0.305]
+        K: [596.0, 606.0]
+      targets:
+        n_grains: 70.0
+      scales:
+        n_grains: 25.0
+    portfolio_batch: true  # v7: exploit + diffuse scout + UCB scout + gradient seed
+    portfolio_uncertainty_mode: ucb
+    portfolio_ucb_beta: 1.0
+    # A6 mini-NTE knobs
+    mcts_n_leaves: 4
+    mcts_n_samples_per_leaf: 64
+    mcts_sigma_init: 0.015  # v7 wide-768: local restart cloud
+    mcts_sigma_decay: 0.97  # v5: faster decay
+    mcts_c0: 0.1
+    mcts_seed_pool_size: 128
+    mcts_recent_batch_window: 20
+    diffuse_explore_frac: 0.10  # v7: smaller but persistent DANTE-style scout tail
+    diffuse_sigma_scale: 0.02  # v7 wide-d: avoid giant full-d jumps
+    z_center_strategy: current_best  # v7: narrow winners should not be averaged away
+    incumbent_policy: all  # keep seed incumbent until a fresh eval truly beats it
+    property_acq_incumbent_policy: fresh_after_seed  # v9: property-EI threshold follows fresh progress
+    seed_rows: 100
+    z_center_topk: 5  # v5: K for topk_centroid
+    polish_after_iter: 32  # v7: earlier polish after portfolio exploration
+    perturb_dims_target: 48  # v7 wide-768: less noisy sparse perturbations
+
+loop:
+  n_iterations: 40
+  # Patch: exclude soft-penalty rejects from the GP/DNN surrogate fit.
+  mask_failed_from_surrogate: false  # wide-d: surrogate must learn manifold boundary
+  checkpoint_every: 1
+  log_every: 1
+  dry_run: false
+  # Pre-encoded 100-run cache (Z, Y, success) — every optimizer starts here.
+  seed_cache: "data/seed_caches/seed_cache_AZ31_v2_fmdit_768.npz"
+  resume_checkpoint: null
+  # Anchor microstructure: pin the optimizer's starting center to the latent
+  # of sim_449 (a known well-resolved ~140-grain AZ31 RVE from the runs/
+  # corpus). Same anchor is used for DANTE and MERIDIAN so the comparison
+  # is fair (any drift away from it is purely the optimizer's choice).
+  initial_seed:
+    criterion: band_top_y
+    band_lo: 50
+    band_hi: 350
+
+  # Drop catastrophic speckle / blob outliers (n_grains outside [40, 700])
+  # from the seed cache before warm-starting the surrogate. With the upper-band
+  # penalty active these entries score around -5 to -6, which is fine, but
+  # they still pollute local surrogate fits around the in-band anchor.
+  cache_filter:
+    enabled: false
+    keep_g_min: 40
+    keep_g_max: 700
+
+# The 4-optimizer × 1-decoder × 2-objective grid is materialised by
+# scripts/run_ablation.py; ablation block kept here for reference.
+ablation:
+  decoders:   ["fmdit_768"]
+  optimizers: ["dante", "turbo", "baxus", "meridian"]
+  objectives: ["v1", "v2"]
+  n_repeats: 1

@@ -1,0 +1,902 @@
+[
+  {
+    "sim_id": "orientation_103",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_103.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_103/properties.json",
+    "success": true,
+    "objective": -0.12919372646677968,
+    "error": null,
+    "n_grains": 448
+  },
+  {
+    "sim_id": "orientation_1066",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1066.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1066/properties.json",
+    "success": true,
+    "objective": -0.14224402446303397,
+    "error": null,
+    "n_grains": 959
+  },
+  {
+    "sim_id": "orientation_1076",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1076.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1076/properties.json",
+    "success": true,
+    "objective": -0.11429854577474026,
+    "error": null,
+    "n_grains": 514
+  },
+  {
+    "sim_id": "orientation_1080",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1080.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1080/properties.json",
+    "success": true,
+    "objective": -0.101984084068272,
+    "error": null,
+    "n_grains": 358
+  },
+  {
+    "sim_id": "orientation_1127",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1127.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1127/properties.json",
+    "success": true,
+    "objective": -0.15320160508860375,
+    "error": null,
+    "n_grains": 716
+  },
+  {
+    "sim_id": "orientation_1129",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1129.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1129/properties.json",
+    "success": true,
+    "objective": -0.03636880659191267,
+    "error": null,
+    "n_grains": 340
+  },
+  {
+    "sim_id": "orientation_1203",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1203.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1203/properties.json",
+    "success": true,
+    "objective": -0.12317417822736322,
+    "error": null,
+    "n_grains": 349
+  },
+  {
+    "sim_id": "orientation_1218",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1218.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1218/properties.json",
+    "success": true,
+    "objective": -0.09463878251906632,
+    "error": null,
+    "n_grains": 650
+  },
+  {
+    "sim_id": "orientation_1258",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1258.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1258/properties.json",
+    "success": true,
+    "objective": -0.10212844693417346,
+    "error": null,
+    "n_grains": 697
+  },
+  {
+    "sim_id": "orientation_1419",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1419.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1419/properties.json",
+    "success": true,
+    "objective": -0.10367444571471127,
+    "error": null,
+    "n_grains": 315
+  },
+  {
+    "sim_id": "orientation_1589",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1589.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1589/properties.json",
+    "success": true,
+    "objective": -0.150931369662804,
+    "error": null,
+    "n_grains": 327
+  },
+  {
+    "sim_id": "orientation_1622",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1622.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1622/properties.json",
+    "success": true,
+    "objective": -0.042315977390385014,
+    "error": null,
+    "n_grains": 364
+  },
+  {
+    "sim_id": "orientation_1708",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1708.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1708/properties.json",
+    "success": true,
+    "objective": -0.1221303151077528,
+    "error": null,
+    "n_grains": 309
+  },
+  {
+    "sim_id": "orientation_1734",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1734.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1734/properties.json",
+    "success": true,
+    "objective": -0.13351569781430123,
+    "error": null,
+    "n_grains": 292
+  },
+  {
+    "sim_id": "orientation_1815",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1815.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1815/properties.json",
+    "success": true,
+    "objective": -0.15590595658418782,
+    "error": null,
+    "n_grains": 771
+  },
+  {
+    "sim_id": "orientation_182",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_182.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_182/properties.json",
+    "success": true,
+    "objective": -0.04588450378432221,
+    "error": null,
+    "n_grains": 589
+  },
+  {
+    "sim_id": "orientation_1933",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1933.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1933/properties.json",
+    "success": true,
+    "objective": -0.05296731668766786,
+    "error": null,
+    "n_grains": 500
+  },
+  {
+    "sim_id": "orientation_1997",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_1997.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_1997/properties.json",
+    "success": true,
+    "objective": -0.0639783822657882,
+    "error": null,
+    "n_grains": 969
+  },
+  {
+    "sim_id": "orientation_2224",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2224.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2224/properties.json",
+    "success": true,
+    "objective": -0.0704639048359705,
+    "error": null,
+    "n_grains": 768
+  },
+  {
+    "sim_id": "orientation_2259",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2259.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2259/properties.json",
+    "success": true,
+    "objective": -0.04409589722134727,
+    "error": null,
+    "n_grains": 560
+  },
+  {
+    "sim_id": "orientation_2260",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2260.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2260/properties.json",
+    "success": true,
+    "objective": -0.12088519114352989,
+    "error": null,
+    "n_grains": 721
+  },
+  {
+    "sim_id": "orientation_2289",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2289.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2289/properties.json",
+    "success": true,
+    "objective": -0.14992994952725086,
+    "error": null,
+    "n_grains": 1043
+  },
+  {
+    "sim_id": "orientation_2323",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2323.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2323/properties.json",
+    "success": true,
+    "objective": -0.06152028743339418,
+    "error": null,
+    "n_grains": 962
+  },
+  {
+    "sim_id": "orientation_2335",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2335.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2335/properties.json",
+    "success": true,
+    "objective": -0.04569366864926108,
+    "error": null,
+    "n_grains": 341
+  },
+  {
+    "sim_id": "orientation_2367",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2367.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2367/properties.json",
+    "success": true,
+    "objective": -0.07219436154625174,
+    "error": null,
+    "n_grains": 768
+  },
+  {
+    "sim_id": "orientation_2374",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2374.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2374/properties.json",
+    "success": true,
+    "objective": -0.13368060010180102,
+    "error": null,
+    "n_grains": 907
+  },
+  {
+    "sim_id": "orientation_2381",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2381.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2381/properties.json",
+    "success": true,
+    "objective": -0.12016307521983192,
+    "error": null,
+    "n_grains": 532
+  },
+  {
+    "sim_id": "orientation_2402",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2402.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2402/properties.json",
+    "success": true,
+    "objective": -0.126622450609585,
+    "error": null,
+    "n_grains": 446
+  },
+  {
+    "sim_id": "orientation_2453",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2453.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2453/properties.json",
+    "success": true,
+    "objective": -0.11773415098733778,
+    "error": null,
+    "n_grains": 457
+  },
+  {
+    "sim_id": "orientation_2467",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2467.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2467/properties.json",
+    "success": true,
+    "objective": -0.15923156657205279,
+    "error": null,
+    "n_grains": 462
+  },
+  {
+    "sim_id": "orientation_2617",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2617.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2617/properties.json",
+    "success": true,
+    "objective": -0.16401557047798493,
+    "error": null,
+    "n_grains": 1007
+  },
+  {
+    "sim_id": "orientation_2699",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2699.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2699/properties.json",
+    "success": true,
+    "objective": -0.030557609592132683,
+    "error": null,
+    "n_grains": 377
+  },
+  {
+    "sim_id": "orientation_2705",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2705.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2705/properties.json",
+    "success": true,
+    "objective": -0.07273335730110457,
+    "error": null,
+    "n_grains": 926
+  },
+  {
+    "sim_id": "orientation_2717",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2717.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2717/properties.json",
+    "success": true,
+    "objective": -0.1325503453478282,
+    "error": null,
+    "n_grains": 343
+  },
+  {
+    "sim_id": "orientation_2782",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2782.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2782/properties.json",
+    "success": true,
+    "objective": -0.15173930756013915,
+    "error": null,
+    "n_grains": 275
+  },
+  {
+    "sim_id": "orientation_2926",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2926.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2926/properties.json",
+    "success": true,
+    "objective": -0.09383955126351924,
+    "error": null,
+    "n_grains": 621
+  },
+  {
+    "sim_id": "orientation_2928",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_2928.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_2928/properties.json",
+    "success": true,
+    "objective": -0.11034452367856964,
+    "error": null,
+    "n_grains": 491
+  },
+  {
+    "sim_id": "orientation_3083",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3083.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3083/properties.json",
+    "success": true,
+    "objective": -0.09981779401335623,
+    "error": null,
+    "n_grains": 607
+  },
+  {
+    "sim_id": "orientation_3092",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3092.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3092/properties.json",
+    "success": true,
+    "objective": -0.10604762629385948,
+    "error": null,
+    "n_grains": 419
+  },
+  {
+    "sim_id": "orientation_3150",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3150.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3150/properties.json",
+    "success": true,
+    "objective": -0.08682433426674722,
+    "error": null,
+    "n_grains": 440
+  },
+  {
+    "sim_id": "orientation_3259",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3259.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3259/properties.json",
+    "success": true,
+    "objective": -0.07036684266733706,
+    "error": null,
+    "n_grains": 412
+  },
+  {
+    "sim_id": "orientation_3305",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3305.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3305/properties.json",
+    "success": true,
+    "objective": -0.12768705836117245,
+    "error": null,
+    "n_grains": 360
+  },
+  {
+    "sim_id": "orientation_3326",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3326.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3326/properties.json",
+    "success": true,
+    "objective": -0.11309885221169738,
+    "error": null,
+    "n_grains": 794
+  },
+  {
+    "sim_id": "orientation_3362",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3362.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3362/properties.json",
+    "success": true,
+    "objective": -0.11462723258328311,
+    "error": null,
+    "n_grains": 368
+  },
+  {
+    "sim_id": "orientation_3404",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3404.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3404/properties.json",
+    "success": true,
+    "objective": -0.1361725588920454,
+    "error": null,
+    "n_grains": 758
+  },
+  {
+    "sim_id": "orientation_3421",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3421.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3421/properties.json",
+    "success": true,
+    "objective": -0.1025701505990049,
+    "error": null,
+    "n_grains": 592
+  },
+  {
+    "sim_id": "orientation_3428",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_3428.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_3428/properties.json",
+    "success": true,
+    "objective": -0.13437153953941824,
+    "error": null,
+    "n_grains": 897
+  },
+  {
+    "sim_id": "orientation_358",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_358.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_358/properties.json",
+    "success": true,
+    "objective": -0.05814711596256524,
+    "error": null,
+    "n_grains": 790
+  },
+  {
+    "sim_id": "orientation_4006",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4006.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4006/properties.json",
+    "success": true,
+    "objective": -0.032393582528703446,
+    "error": null,
+    "n_grains": 388
+  },
+  {
+    "sim_id": "orientation_4319",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4319.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4319/properties.json",
+    "success": true,
+    "objective": -0.14238379262838377,
+    "error": null,
+    "n_grains": 292
+  },
+  {
+    "sim_id": "orientation_4517",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4517.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4517/properties.json",
+    "success": true,
+    "objective": -0.13666439613021214,
+    "error": null,
+    "n_grains": 463
+  },
+  {
+    "sim_id": "orientation_4807",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4807.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4807/properties.json",
+    "success": true,
+    "objective": -0.14401834795144935,
+    "error": null,
+    "n_grains": 402
+  },
+  {
+    "sim_id": "orientation_4861",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4861.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4861/properties.json",
+    "success": true,
+    "objective": -0.1429265367422993,
+    "error": null,
+    "n_grains": 449
+  },
+  {
+    "sim_id": "orientation_4878",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4878.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4878/properties.json",
+    "success": true,
+    "objective": -0.06329858529645825,
+    "error": null,
+    "n_grains": 277
+  },
+  {
+    "sim_id": "orientation_4935",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4935.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4935/properties.json",
+    "success": true,
+    "objective": -0.0758120179273176,
+    "error": null,
+    "n_grains": 521
+  },
+  {
+    "sim_id": "orientation_4978",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_4978.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_4978/properties.json",
+    "success": true,
+    "objective": -0.05554523897547003,
+    "error": null,
+    "n_grains": 402
+  },
+  {
+    "sim_id": "orientation_5028",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5028.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5028/properties.json",
+    "success": true,
+    "objective": -0.058132500599915794,
+    "error": null,
+    "n_grains": 837
+  },
+  {
+    "sim_id": "orientation_5176",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5176.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5176/properties.json",
+    "success": true,
+    "objective": -0.08411405179601943,
+    "error": null,
+    "n_grains": 1056
+  },
+  {
+    "sim_id": "orientation_5261",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5261.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5261/properties.json",
+    "success": true,
+    "objective": -0.04251355343794374,
+    "error": null,
+    "n_grains": 739
+  },
+  {
+    "sim_id": "orientation_531",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_531.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_531/properties.json",
+    "success": true,
+    "objective": -0.13741393947838848,
+    "error": null,
+    "n_grains": 600
+  },
+  {
+    "sim_id": "orientation_5310",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5310.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5310/properties.json",
+    "success": true,
+    "objective": -0.06327456653467822,
+    "error": null,
+    "n_grains": 625
+  },
+  {
+    "sim_id": "orientation_5314",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5314.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5314/properties.json",
+    "success": true,
+    "objective": -0.05342588544465569,
+    "error": null,
+    "n_grains": 424
+  },
+  {
+    "sim_id": "orientation_5434",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5434.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5434/properties.json",
+    "success": true,
+    "objective": -0.061801598496097045,
+    "error": null,
+    "n_grains": 430
+  },
+  {
+    "sim_id": "orientation_5453",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5453.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5453/properties.json",
+    "success": true,
+    "objective": -0.040753321787932575,
+    "error": null,
+    "n_grains": 347
+  },
+  {
+    "sim_id": "orientation_5508",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5508.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5508/properties.json",
+    "success": true,
+    "objective": -0.08277849554937067,
+    "error": null,
+    "n_grains": 476
+  },
+  {
+    "sim_id": "orientation_5509",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5509.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5509/properties.json",
+    "success": true,
+    "objective": -0.06796735566237337,
+    "error": null,
+    "n_grains": 1086
+  },
+  {
+    "sim_id": "orientation_551",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_551.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_551/properties.json",
+    "success": true,
+    "objective": -0.16014362371725643,
+    "error": null,
+    "n_grains": 907
+  },
+  {
+    "sim_id": "orientation_5528",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5528.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5528/properties.json",
+    "success": true,
+    "objective": -0.0658565766111541,
+    "error": null,
+    "n_grains": 700
+  },
+  {
+    "sim_id": "orientation_5552",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5552.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5552/properties.json",
+    "success": true,
+    "objective": -0.04894675948224844,
+    "error": null,
+    "n_grains": 1019
+  },
+  {
+    "sim_id": "orientation_5555",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5555.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5555/properties.json",
+    "success": true,
+    "objective": -0.08214722910119825,
+    "error": null,
+    "n_grains": 273
+  },
+  {
+    "sim_id": "orientation_5663",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5663.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5663/properties.json",
+    "success": true,
+    "objective": -0.06344757992179766,
+    "error": null,
+    "n_grains": 425
+  },
+  {
+    "sim_id": "orientation_5674",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5674.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5674/properties.json",
+    "success": true,
+    "objective": -0.0497481983327705,
+    "error": null,
+    "n_grains": 325
+  },
+  {
+    "sim_id": "orientation_5700",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5700.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5700/properties.json",
+    "success": true,
+    "objective": -0.058532229868598115,
+    "error": null,
+    "n_grains": 580
+  },
+  {
+    "sim_id": "orientation_5707",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5707.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5707/properties.json",
+    "success": true,
+    "objective": -0.05614343220356182,
+    "error": null,
+    "n_grains": 385
+  },
+  {
+    "sim_id": "orientation_5748",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5748.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5748/properties.json",
+    "success": true,
+    "objective": -0.060175341856928084,
+    "error": null,
+    "n_grains": 520
+  },
+  {
+    "sim_id": "orientation_5753",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5753.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5753/properties.json",
+    "success": true,
+    "objective": -0.0718794060272571,
+    "error": null,
+    "n_grains": 644
+  },
+  {
+    "sim_id": "orientation_5793",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5793.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5793/properties.json",
+    "success": true,
+    "objective": -0.0690828234782327,
+    "error": null,
+    "n_grains": 791
+  },
+  {
+    "sim_id": "orientation_589",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_589.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_589/properties.json",
+    "success": true,
+    "objective": -0.13142620328001053,
+    "error": null,
+    "n_grains": 361
+  },
+  {
+    "sim_id": "orientation_5924",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5924.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5924/properties.json",
+    "success": true,
+    "objective": -0.0491003197532528,
+    "error": null,
+    "n_grains": 643
+  },
+  {
+    "sim_id": "orientation_5962",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_5962.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_5962/properties.json",
+    "success": true,
+    "objective": -0.04199316359640663,
+    "error": null,
+    "n_grains": 808
+  },
+  {
+    "sim_id": "orientation_6010",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6010.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6010/properties.json",
+    "success": true,
+    "objective": -0.08160743969552788,
+    "error": null,
+    "n_grains": 274
+  },
+  {
+    "sim_id": "orientation_6101",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6101.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6101/properties.json",
+    "success": true,
+    "objective": -0.0983860196327875,
+    "error": null,
+    "n_grains": 417
+  },
+  {
+    "sim_id": "orientation_6108",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6108.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6108/properties.json",
+    "success": true,
+    "objective": -0.07025836965593295,
+    "error": null,
+    "n_grains": 376
+  },
+  {
+    "sim_id": "orientation_6130",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6130.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6130/properties.json",
+    "success": true,
+    "objective": -0.09028434284955354,
+    "error": null,
+    "n_grains": 308
+  },
+  {
+    "sim_id": "orientation_6150",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6150.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6150/properties.json",
+    "success": true,
+    "objective": -0.07013095516151407,
+    "error": null,
+    "n_grains": 694
+  },
+  {
+    "sim_id": "orientation_6184",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6184.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6184/properties.json",
+    "success": true,
+    "objective": -0.07567747945794734,
+    "error": null,
+    "n_grains": 472
+  },
+  {
+    "sim_id": "orientation_6361",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6361.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6361/properties.json",
+    "success": true,
+    "objective": -0.086797950312057,
+    "error": null,
+    "n_grains": 723
+  },
+  {
+    "sim_id": "orientation_6845",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6845.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6845/properties.json",
+    "success": true,
+    "objective": -0.09902534759961275,
+    "error": null,
+    "n_grains": 628
+  },
+  {
+    "sim_id": "orientation_6959",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_6959.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_6959/properties.json",
+    "success": true,
+    "objective": -0.08599161761693605,
+    "error": null,
+    "n_grains": 369
+  },
+  {
+    "sim_id": "orientation_7037",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7037.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7037/properties.json",
+    "success": true,
+    "objective": -0.10434938709608059,
+    "error": null,
+    "n_grains": 282
+  },
+  {
+    "sim_id": "orientation_7048",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7048.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7048/properties.json",
+    "success": true,
+    "objective": -0.10356393799133974,
+    "error": null,
+    "n_grains": 632
+  },
+  {
+    "sim_id": "orientation_7226",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7226.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7226/properties.json",
+    "success": true,
+    "objective": -0.06991402964384623,
+    "error": null,
+    "n_grains": 329
+  },
+  {
+    "sim_id": "orientation_7243",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7243.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7243/properties.json",
+    "success": true,
+    "objective": -0.08228363931430169,
+    "error": null,
+    "n_grains": 321
+  },
+  {
+    "sim_id": "orientation_7361",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7361.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7361/properties.json",
+    "success": true,
+    "objective": -0.10173615947203049,
+    "error": null,
+    "n_grains": 318
+  },
+  {
+    "sim_id": "orientation_7370",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7370.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7370/properties.json",
+    "success": true,
+    "objective": -0.09624971442538244,
+    "error": null,
+    "n_grains": 565
+  },
+  {
+    "sim_id": "orientation_7374",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7374.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7374/properties.json",
+    "success": true,
+    "objective": -0.08612751826687493,
+    "error": null,
+    "n_grains": 294
+  },
+  {
+    "sim_id": "orientation_7422",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_7422.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_7422/properties.json",
+    "success": true,
+    "objective": -0.08365392239541256,
+    "error": null,
+    "n_grains": 318
+  },
+  {
+    "sim_id": "orientation_82",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_82.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_82/properties.json",
+    "success": true,
+    "objective": -0.10369406730036108,
+    "error": null,
+    "n_grains": 1043
+  },
+  {
+    "sim_id": "orientation_874",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_874.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_874/properties.json",
+    "success": true,
+    "objective": -0.1543904846424119,
+    "error": null,
+    "n_grains": 361
+  },
+  {
+    "sim_id": "orientation_937",
+    "png": "rve/Mg-5Gd_extruded/Mg-5Gd_extruded_orientation_937.png",
+    "props": "simulations/runs_mg5gd/sim_orientation_937/properties.json",
+    "success": true,
+    "objective": -0.1197555194637891,
+    "error": null,
+    "n_grains": 764
+  }
+]

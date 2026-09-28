@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.0">
+  <Domain>
+    <Grid Name="SyntheticVolumeDataContainer" GridType="Uniform">
+      <Topology TopologyType="3DCoRectMesh" Dimensions="2 301 301"/>
+      <Geometry GeometryType="ORIGIN_DXDYDZ">
+        <DataItem Dimensions="3" NumberType="Float" Precision="4" Format="XML">
+          0.0 0.0 0.0
+        </DataItem>
+        <DataItem Dimensions="3" NumberType="Float" Precision="4" Format="XML">
+          2.0 2.0 2.0
+        </DataItem>
+      </Geometry>
+      <Attribute Name="EulerAngles" AttributeType="Vector" Center="Cell">
+        <DataItem Dimensions="1 300 300 3" NumberType="Float" Precision="4" Format="HDF">
+          AZ31_extruded_orientation_103.dream3d:/DataContainers/SyntheticVolumeDataContainer/CellData/EulerAngles
+        </DataItem>
+      </Attribute>
+      <Attribute Name="FeatureIds" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="1 300 300 1" NumberType="Int" Format="HDF">
+          AZ31_extruded_orientation_103.dream3d:/DataContainers/SyntheticVolumeDataContainer/CellData/FeatureIds
+        </DataItem>
+      </Attribute>
+      <Attribute Name="Phases" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="1 300 300 1" NumberType="Int" Format="HDF">
+          AZ31_extruded_orientation_103.dream3d:/DataContainers/SyntheticVolumeDataContainer/CellData/Phases
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

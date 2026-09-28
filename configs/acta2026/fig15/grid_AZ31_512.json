@@ -1,0 +1,368 @@
+{
+  "alloy": "AZ31",
+  "tag": "512",
+  "base_config": "config/az31_fmdit_meridian_v2.yaml",
+  "source_seed_cache": "data/seed_caches/seed_cache_AZ31_v2_fmdit.npz",
+  "frame": {
+    "mu": [
+      147.40090454612954,
+      0.3069561680957421
+    ],
+    "sd": [
+      2.8811704384454133,
+      0.0018279074747252317
+    ],
+    "u_along": [
+      -0.6004449253151736,
+      0.7996661126140432
+    ],
+    "u_across": [
+      0.7996661126140432,
+      0.6004449253151736
+    ],
+    "centre": [
+      1.703610943398956,
+      -2.2367921717894643
+    ],
+    "sd_along": 2.7840353426588678,
+    "sd_across": 0.7494711442601056,
+    "anisotropy": 13.798747110655107,
+    "corr_sigma_y_n": -0.8558028657965948,
+    "n_visited": 8319,
+    "n_seeds": 100
+  },
+  "t_along_levels": [
+    -5.0,
+    -1.8,
+    1.4,
+    4.6
+  ],
+  "t_across_levels": [
+    -0.8,
+    0.6,
+    2.0,
+    3.4
+  ],
+  "cells": [
+    {
+      "index": 0,
+      "t_along": -5.0,
+      "t_across": -0.8,
+      "sigma_y": 159.1160393870938,
+      "n": 0.2946808944291473,
+      "d_visit": 0.018873828997962205,
+      "d_seed": 4.300080180512494,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c00.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c00.npz",
+      "tr_schedule": {
+        "L_init": 0.944,
+        "L_min": 0.0328,
+        "L_max": 1.344,
+        "success_tolerance": 2,
+        "failure_tolerance_factor": 2.29,
+        "failure_tolerance_max": 13
+      }
+    },
+    {
+      "index": 1,
+      "t_along": -5.0,
+      "t_across": 0.6,
+      "sigma_y": 162.3416034971,
+      "n": 0.2962174753031495,
+      "d_visit": 0.17914478167880257,
+      "d_seed": 4.7198367064623135,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c01.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c01.npz",
+      "tr_schedule": {
+        "L_init": 0.9776,
+        "L_min": 0.0311,
+        "L_max": 1.3776,
+        "success_tolerance": 2,
+        "failure_tolerance_factor": 2.416,
+        "failure_tolerance_max": 14
+      }
+    },
+    {
+      "index": 2,
+      "t_along": -5.0,
+      "t_across": 2.0,
+      "sigma_y": 165.5671676071062,
+      "n": 0.2977540561771517,
+      "d_visit": 1.4988922733535812,
+      "d_seed": 5.348690777880189,
+      "prediction": "beyond",
+      "config": "config/fig15/az31_512_fig15_c02.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c02.npz",
+      "tr_schedule": {
+        "L_init": 1.0,
+        "L_min": 0.03,
+        "L_max": 1.4,
+        "success_tolerance": 2,
+        "failure_tolerance_factor": 2.5,
+        "failure_tolerance_max": 14
+      }
+    },
+    {
+      "index": 3,
+      "t_along": -5.0,
+      "t_across": 3.4,
+      "sigma_y": 168.79273171711242,
+      "n": 0.29929063705115394,
+      "d_visit": 2.738292410324068,
+      "d_seed": 6.233789179872236,
+      "prediction": "beyond",
+      "config": "config/fig15/az31_512_fig15_c03.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c03.npz",
+      "tr_schedule": {
+        "L_init": 1.0,
+        "L_min": 0.03,
+        "L_max": 1.4,
+        "success_tolerance": 2,
+        "failure_tolerance_factor": 2.5,
+        "failure_tolerance_max": 14
+      }
+    },
+    {
+      "index": 4,
+      "t_along": -1.8,
+      "t_across": -0.8,
+      "sigma_y": 153.58009004714935,
+      "n": 0.29935838455564867,
+      "d_visit": 0.08734161833043622,
+      "d_seed": 1.26445254010982,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c04.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c04.npz",
+      "tr_schedule": {
+        "L_init": 0.7012,
+        "L_min": 0.0449,
+        "L_max": 1.1012,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.3793,
+        "failure_tolerance_max": 10
+      }
+    },
+    {
+      "index": 5,
+      "t_along": -1.8,
+      "t_across": 0.6,
+      "sigma_y": 156.80565415715554,
+      "n": 0.3008949654296509,
+      "d_visit": 0.005875008268082061,
+      "d_seed": 2.002616969842648,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c05.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c05.npz",
+      "tr_schedule": {
+        "L_init": 0.7602,
+        "L_min": 0.042,
+        "L_max": 1.1602,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.6008,
+        "failure_tolerance_max": 10
+      }
+    },
+    {
+      "index": 6,
+      "t_along": -1.8,
+      "t_across": 2.0,
+      "sigma_y": 160.03121826716176,
+      "n": 0.3024315463036531,
+      "d_visit": 0.647885119535251,
+      "d_seed": 2.7872045299707846,
+      "prediction": "edge",
+      "config": "config/fig15/az31_512_fig15_c06.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c06.npz",
+      "tr_schedule": {
+        "L_init": 0.823,
+        "L_min": 0.0389,
+        "L_max": 1.223,
+        "success_tolerance": 2,
+        "failure_tolerance_factor": 1.8362,
+        "failure_tolerance_max": 11
+      }
+    },
+    {
+      "index": 7,
+      "t_along": -1.8,
+      "t_across": 3.4,
+      "sigma_y": 163.25678237716795,
+      "n": 0.3039681271776553,
+      "d_visit": 1.8146769251516983,
+      "d_seed": 3.5282898187818104,
+      "prediction": "beyond",
+      "config": "config/fig15/az31_512_fig15_c07.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c07.npz",
+      "tr_schedule": {
+        "L_init": 0.8823,
+        "L_min": 0.0359,
+        "L_max": 1.2823,
+        "success_tolerance": 2,
+        "failure_tolerance_factor": 2.0585,
+        "failure_tolerance_max": 12
+      }
+    },
+    {
+      "index": 8,
+      "t_along": 1.4,
+      "t_across": -0.8,
+      "sigma_y": 148.0441407072049,
+      "n": 0.30403587468215004,
+      "d_visit": 0.11824187649750666,
+      "d_seed": 0.11824187649750666,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c08.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c08.npz",
+      "tr_schedule": {
+        "L_init": 0.6095,
+        "L_min": 0.0495,
+        "L_max": 1.0095,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.0355,
+        "failure_tolerance_max": 8
+      }
+    },
+    {
+      "index": 9,
+      "t_along": 1.4,
+      "t_across": 0.6,
+      "sigma_y": 151.2697048172111,
+      "n": 0.30557245555615226,
+      "d_visit": 0.06648055078803894,
+      "d_seed": 0.35321481824084927,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c09.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c09.npz",
+      "tr_schedule": {
+        "L_init": 0.6283,
+        "L_min": 0.0486,
+        "L_max": 1.0283,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.106,
+        "failure_tolerance_max": 8
+      }
+    },
+    {
+      "index": 10,
+      "t_along": 1.4,
+      "t_across": 2.0,
+      "sigma_y": 154.4952689272173,
+      "n": 0.30710903643015447,
+      "d_visit": 0.6618765425417023,
+      "d_seed": 0.7850695583499651,
+      "prediction": "edge",
+      "config": "config/fig15/az31_512_fig15_c10.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c10.npz",
+      "tr_schedule": {
+        "L_init": 0.6628,
+        "L_min": 0.0469,
+        "L_max": 1.0628,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.2355,
+        "failure_tolerance_max": 9
+      }
+    },
+    {
+      "index": 11,
+      "t_along": 1.4,
+      "t_across": 3.4,
+      "sigma_y": 157.72083303722349,
+      "n": 0.3086456173041567,
+      "d_visit": 1.902542712296418,
+      "d_seed": 1.9893412444613816,
+      "prediction": "beyond",
+      "config": "config/fig15/az31_512_fig15_c11.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c11.npz",
+      "tr_schedule": {
+        "L_init": 0.7591,
+        "L_min": 0.042,
+        "L_max": 1.1591,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.5968,
+        "failure_tolerance_max": 10
+      }
+    },
+    {
+      "index": 12,
+      "t_along": 4.6,
+      "t_across": -0.8,
+      "sigma_y": 142.50819136726045,
+      "n": 0.3087133648086514,
+      "d_visit": 0.1537929509438076,
+      "d_seed": 0.5063014155737364,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c12.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c12.npz",
+      "tr_schedule": {
+        "L_init": 0.6405,
+        "L_min": 0.048,
+        "L_max": 1.0405,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.1519,
+        "failure_tolerance_max": 9
+      }
+    },
+    {
+      "index": 13,
+      "t_along": 4.6,
+      "t_across": 0.6,
+      "sigma_y": 145.73375547726664,
+      "n": 0.3102499456826536,
+      "d_visit": 0.18349323535138706,
+      "d_seed": 0.18349323535138706,
+      "prediction": "reachable",
+      "config": "config/fig15/az31_512_fig15_c13.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c13.npz",
+      "tr_schedule": {
+        "L_init": 0.6147,
+        "L_min": 0.0493,
+        "L_max": 1.0147,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.055,
+        "failure_tolerance_max": 8
+      }
+    },
+    {
+      "index": 14,
+      "t_along": 4.6,
+      "t_across": 2.0,
+      "sigma_y": 148.95931958727283,
+      "n": 0.31178652655665584,
+      "d_visit": 0.8997000929284552,
+      "d_seed": 1.2890620030625024,
+      "prediction": "edge",
+      "config": "config/fig15/az31_512_fig15_c14.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c14.npz",
+      "tr_schedule": {
+        "L_init": 0.7031,
+        "L_min": 0.0448,
+        "L_max": 1.1031,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.3867,
+        "failure_tolerance_max": 10
+      }
+    },
+    {
+      "index": 15,
+      "t_along": 4.6,
+      "t_across": 3.4,
+      "sigma_y": 152.18488369727905,
+      "n": 0.31332310743065805,
+      "d_visit": 1.6234072995074365,
+      "d_seed": 2.3714454807820364,
+      "prediction": "beyond",
+      "config": "config/fig15/az31_512_fig15_c15.yaml",
+      "seed_cache": "data/seed_caches/fig15/AZ31_512/seed_cache_c15.npz",
+      "tr_schedule": {
+        "L_init": 0.7897,
+        "L_min": 0.0405,
+        "L_max": 1.1897,
+        "success_tolerance": 3,
+        "failure_tolerance_factor": 1.7114,
+        "failure_tolerance_max": 11
+      }
+    }
+  ]
+}

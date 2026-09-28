@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Outputs
+example_output/
+
+# Run outputs, logs and downloaded weights
+/results/
+/logs/
+/weights/
+/_landscape_work/
+simulations/runs/
+*.hdf5
+*.sta
+*.vti

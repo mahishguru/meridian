@@ -1,0 +1,1002 @@
+[
+  {
+    "sim_id": "orientation_103",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_103.png",
+    "props": "simulations/runs/sim_orientation_103/properties.json",
+    "success": true,
+    "objective": -6.841501102204003,
+    "error": null,
+    "n_grains": 455,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_120",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_120.png",
+    "props": "simulations/runs/sim_orientation_120/properties.json",
+    "success": true,
+    "objective": -7.0817597734975175,
+    "error": null,
+    "n_grains": 341,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1449",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1449.png",
+    "props": "simulations/runs/sim_orientation_1449/properties.json",
+    "success": true,
+    "objective": -5.9856331394967075,
+    "error": null,
+    "n_grains": 506,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1588",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1588.png",
+    "props": "simulations/runs/sim_orientation_1588/properties.json",
+    "success": true,
+    "objective": -7.066198591754437,
+    "error": null,
+    "n_grains": 459,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1612",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1612.png",
+    "props": "simulations/runs/sim_orientation_1612/properties.json",
+    "success": true,
+    "objective": -7.610778721298569,
+    "error": null,
+    "n_grains": 425,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1678",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1678.png",
+    "props": "simulations/runs/sim_orientation_1678/properties.json",
+    "success": true,
+    "objective": -7.081438806040157,
+    "error": null,
+    "n_grains": 862,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_170",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_170.png",
+    "props": "simulations/runs/sim_orientation_170/properties.json",
+    "success": true,
+    "objective": -7.140515736770804,
+    "error": null,
+    "n_grains": 753,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1793",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1793.png",
+    "props": "simulations/runs/sim_orientation_1793/properties.json",
+    "success": true,
+    "objective": -7.336838760314744,
+    "error": null,
+    "n_grains": 508,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_181",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_181.png",
+    "props": "simulations/runs/sim_orientation_181/properties.json",
+    "success": true,
+    "objective": -5.7840084875886575,
+    "error": null,
+    "n_grains": 376,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1810",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1810.png",
+    "props": "simulations/runs/sim_orientation_1810/properties.json",
+    "success": true,
+    "objective": -8.218068073574504,
+    "error": null,
+    "n_grains": 724,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1813",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1813.png",
+    "props": "simulations/runs/sim_orientation_1813/properties.json",
+    "success": true,
+    "objective": -8.739930191583568,
+    "error": null,
+    "n_grains": 384,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1878",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1878.png",
+    "props": "simulations/runs/sim_orientation_1878/properties.json",
+    "success": true,
+    "objective": -6.740236379685601,
+    "error": null,
+    "n_grains": 362,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1884",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1884.png",
+    "props": "simulations/runs/sim_orientation_1884/properties.json",
+    "success": true,
+    "objective": -8.239909058348031,
+    "error": null,
+    "n_grains": 630,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1934",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1934.png",
+    "props": "simulations/runs/sim_orientation_1934/properties.json",
+    "success": true,
+    "objective": -9.447542866177447,
+    "error": null,
+    "n_grains": 263,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1986",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1986.png",
+    "props": "simulations/runs/sim_orientation_1986/properties.json",
+    "success": true,
+    "objective": -7.810436613677326,
+    "error": null,
+    "n_grains": 470,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_1995",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_1995.png",
+    "props": "simulations/runs/sim_orientation_1995/properties.json",
+    "success": true,
+    "objective": -8.125142411597407,
+    "error": null,
+    "n_grains": 764,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2066",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2066.png",
+    "props": "simulations/runs/sim_orientation_2066/properties.json",
+    "success": true,
+    "objective": -7.970406295117927,
+    "error": null,
+    "n_grains": 909,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2119",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2119.png",
+    "props": "simulations/runs/sim_orientation_2119/properties.json",
+    "success": true,
+    "objective": -9.657147956766776,
+    "error": null,
+    "n_grains": 394,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_215",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_215.png",
+    "props": "simulations/runs/sim_orientation_215/properties.json",
+    "success": true,
+    "objective": -7.021849821909926,
+    "error": null,
+    "n_grains": 893,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2183",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2183.png",
+    "props": "simulations/runs/sim_orientation_2183/properties.json",
+    "success": true,
+    "objective": -7.9747614704234815,
+    "error": null,
+    "n_grains": 828,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2222",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2222.png",
+    "props": "simulations/runs/sim_orientation_2222/properties.json",
+    "success": true,
+    "objective": -6.430898105269841,
+    "error": null,
+    "n_grains": 273,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2352",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2352.png",
+    "props": "simulations/runs/sim_orientation_2352/properties.json",
+    "success": true,
+    "objective": -8.162056121348419,
+    "error": null,
+    "n_grains": 796,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2496",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2496.png",
+    "props": "simulations/runs/sim_orientation_2496/properties.json",
+    "success": true,
+    "objective": -6.460315077204474,
+    "error": null,
+    "n_grains": 478,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2561",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2561.png",
+    "props": "simulations/runs/sim_orientation_2561/properties.json",
+    "success": true,
+    "objective": -9.043909726105449,
+    "error": null,
+    "n_grains": 760,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2564",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2564.png",
+    "props": "simulations/runs/sim_orientation_2564/properties.json",
+    "success": true,
+    "objective": -6.577240059775433,
+    "error": null,
+    "n_grains": 274,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2568",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2568.png",
+    "props": "simulations/runs/sim_orientation_2568/properties.json",
+    "success": true,
+    "objective": -8.194414356225487,
+    "error": null,
+    "n_grains": 340,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_257",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_257.png",
+    "props": "simulations/runs/sim_orientation_257/properties.json",
+    "success": true,
+    "objective": -7.906845451523452,
+    "error": null,
+    "n_grains": 919,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2572",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2572.png",
+    "props": "simulations/runs/sim_orientation_2572/properties.json",
+    "success": true,
+    "objective": -10.108631559813038,
+    "error": null,
+    "n_grains": 626,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2600",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2600.png",
+    "props": "simulations/runs/sim_orientation_2600/properties.json",
+    "success": true,
+    "objective": -6.9753711987531295,
+    "error": null,
+    "n_grains": 488,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2637",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2637.png",
+    "props": "simulations/runs/sim_orientation_2637/properties.json",
+    "success": true,
+    "objective": -8.575477308480833,
+    "error": null,
+    "n_grains": 407,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2673",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2673.png",
+    "props": "simulations/runs/sim_orientation_2673/properties.json",
+    "success": true,
+    "objective": -8.097030183608167,
+    "error": null,
+    "n_grains": 1002,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2690",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2690.png",
+    "props": "simulations/runs/sim_orientation_2690/properties.json",
+    "success": true,
+    "objective": -8.81685885402662,
+    "error": null,
+    "n_grains": 586,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2717",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2717.png",
+    "props": "simulations/runs/sim_orientation_2717/properties.json",
+    "success": true,
+    "objective": -6.64265750961766,
+    "error": null,
+    "n_grains": 458,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2865",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2865.png",
+    "props": "simulations/runs/sim_orientation_2865/properties.json",
+    "success": true,
+    "objective": -7.922015818187166,
+    "error": null,
+    "n_grains": 480,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_288",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_288.png",
+    "props": "simulations/runs/sim_orientation_288/properties.json",
+    "success": true,
+    "objective": -7.928282535360305,
+    "error": null,
+    "n_grains": 665,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2908",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2908.png",
+    "props": "simulations/runs/sim_orientation_2908/properties.json",
+    "success": true,
+    "objective": -9.769654238222529,
+    "error": null,
+    "n_grains": 517,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_2972",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_2972.png",
+    "props": "simulations/runs/sim_orientation_2972/properties.json",
+    "success": true,
+    "objective": -8.940626193603155,
+    "error": null,
+    "n_grains": 289,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3066",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3066.png",
+    "props": "simulations/runs/sim_orientation_3066/properties.json",
+    "success": true,
+    "objective": -7.944687210114711,
+    "error": null,
+    "n_grains": 933,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3181",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3181.png",
+    "props": "simulations/runs/sim_orientation_3181/properties.json",
+    "success": true,
+    "objective": -8.347376468118679,
+    "error": null,
+    "n_grains": 1012,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3288",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3288.png",
+    "props": "simulations/runs/sim_orientation_3288/properties.json",
+    "success": true,
+    "objective": -8.053324597149924,
+    "error": null,
+    "n_grains": 672,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3335",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3335.png",
+    "props": "simulations/runs/sim_orientation_3335/properties.json",
+    "success": true,
+    "objective": -7.399327462576827,
+    "error": null,
+    "n_grains": 357,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_348",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_348.png",
+    "props": "simulations/runs/sim_orientation_348/properties.json",
+    "success": true,
+    "objective": -7.069104044238543,
+    "error": null,
+    "n_grains": 272,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3623",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3623.png",
+    "props": "simulations/runs/sim_orientation_3623/properties.json",
+    "success": true,
+    "objective": -9.096792153749712,
+    "error": null,
+    "n_grains": 513,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3687",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3687.png",
+    "props": "simulations/runs/sim_orientation_3687/properties.json",
+    "success": true,
+    "objective": -7.866726822880119,
+    "error": null,
+    "n_grains": 566,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3820",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3820.png",
+    "props": "simulations/runs/sim_orientation_3820/properties.json",
+    "success": true,
+    "objective": -7.382190963134857,
+    "error": null,
+    "n_grains": 606,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_3913",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_3913.png",
+    "props": "simulations/runs/sim_orientation_3913/properties.json",
+    "success": true,
+    "objective": -8.968618049575836,
+    "error": null,
+    "n_grains": 739,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_394",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_394.png",
+    "props": "simulations/runs/sim_orientation_394/properties.json",
+    "success": true,
+    "objective": -7.440741596388819,
+    "error": null,
+    "n_grains": 914,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4035",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4035.png",
+    "props": "simulations/runs/sim_orientation_4035/properties.json",
+    "success": true,
+    "objective": -6.664943454300697,
+    "error": null,
+    "n_grains": 294,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_411",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_411.png",
+    "props": "simulations/runs/sim_orientation_411/properties.json",
+    "success": true,
+    "objective": -6.492921861376321,
+    "error": null,
+    "n_grains": 946,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_415",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_415.png",
+    "props": "simulations/runs/sim_orientation_415/properties.json",
+    "success": true,
+    "objective": -5.828175950239233,
+    "error": null,
+    "n_grains": 710,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4206",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4206.png",
+    "props": "simulations/runs/sim_orientation_4206/properties.json",
+    "success": true,
+    "objective": -8.615000508856555,
+    "error": null,
+    "n_grains": 432,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4336",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4336.png",
+    "props": "simulations/runs/sim_orientation_4336/properties.json",
+    "success": true,
+    "objective": -9.941782231576173,
+    "error": null,
+    "n_grains": 372,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4345",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4345.png",
+    "props": "simulations/runs/sim_orientation_4345/properties.json",
+    "success": true,
+    "objective": -9.43844645673373,
+    "error": null,
+    "n_grains": 616,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4363",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4363.png",
+    "props": "simulations/runs/sim_orientation_4363/properties.json",
+    "success": true,
+    "objective": -7.935942784420822,
+    "error": null,
+    "n_grains": 677,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4474",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4474.png",
+    "props": "simulations/runs/sim_orientation_4474/properties.json",
+    "success": true,
+    "objective": -7.448767861621591,
+    "error": null,
+    "n_grains": 819,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4621",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4621.png",
+    "props": "simulations/runs/sim_orientation_4621/properties.json",
+    "success": true,
+    "objective": -9.711283497185585,
+    "error": null,
+    "n_grains": 528,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4647",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4647.png",
+    "props": "simulations/runs/sim_orientation_4647/properties.json",
+    "success": true,
+    "objective": -8.593168563850062,
+    "error": null,
+    "n_grains": 1042,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4652",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4652.png",
+    "props": "simulations/runs/sim_orientation_4652/properties.json",
+    "success": true,
+    "objective": -9.019846157516682,
+    "error": null,
+    "n_grains": 955,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4731",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4731.png",
+    "props": "simulations/runs/sim_orientation_4731/properties.json",
+    "success": true,
+    "objective": -9.030501464159988,
+    "error": null,
+    "n_grains": 383,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4745",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4745.png",
+    "props": "simulations/runs/sim_orientation_4745/properties.json",
+    "success": true,
+    "objective": -8.938003336505915,
+    "error": null,
+    "n_grains": 746,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4779",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4779.png",
+    "props": "simulations/runs/sim_orientation_4779/properties.json",
+    "success": true,
+    "objective": -8.876511568097962,
+    "error": null,
+    "n_grains": 943,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_4874",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_4874.png",
+    "props": "simulations/runs/sim_orientation_4874/properties.json",
+    "success": true,
+    "objective": -7.548329224588453,
+    "error": null,
+    "n_grains": 657,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5005",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5005.png",
+    "props": "simulations/runs/sim_orientation_5005/properties.json",
+    "success": true,
+    "objective": -6.924702198556284,
+    "error": null,
+    "n_grains": 496,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5064",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5064.png",
+    "props": "simulations/runs/sim_orientation_5064/properties.json",
+    "success": true,
+    "objective": -7.870889614524682,
+    "error": null,
+    "n_grains": 1014,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5303",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5303.png",
+    "props": "simulations/runs/sim_orientation_5303/properties.json",
+    "success": true,
+    "objective": -8.312253389281665,
+    "error": null,
+    "n_grains": 915,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5320",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5320.png",
+    "props": "simulations/runs/sim_orientation_5320/properties.json",
+    "success": true,
+    "objective": -9.830375803234729,
+    "error": null,
+    "n_grains": 659,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5452",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5452.png",
+    "props": "simulations/runs/sim_orientation_5452/properties.json",
+    "success": true,
+    "objective": -7.60104168427037,
+    "error": null,
+    "n_grains": 270,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5465",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5465.png",
+    "props": "simulations/runs/sim_orientation_5465/properties.json",
+    "success": true,
+    "objective": -8.749567736661474,
+    "error": null,
+    "n_grains": 853,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5502",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5502.png",
+    "props": "simulations/runs/sim_orientation_5502/properties.json",
+    "success": true,
+    "objective": -7.825533181989294,
+    "error": null,
+    "n_grains": 606,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5549",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5549.png",
+    "props": "simulations/runs/sim_orientation_5549/properties.json",
+    "success": true,
+    "objective": -8.20068821491118,
+    "error": null,
+    "n_grains": 334,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5617",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5617.png",
+    "props": "simulations/runs/sim_orientation_5617/properties.json",
+    "success": true,
+    "objective": -6.801356374754692,
+    "error": null,
+    "n_grains": 431,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5681",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5681.png",
+    "props": "simulations/runs/sim_orientation_5681/properties.json",
+    "success": true,
+    "objective": -9.365018114591477,
+    "error": null,
+    "n_grains": 288,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5691",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5691.png",
+    "props": "simulations/runs/sim_orientation_5691/properties.json",
+    "success": true,
+    "objective": -7.360184798405046,
+    "error": null,
+    "n_grains": 456,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_581",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_581.png",
+    "props": "simulations/runs/sim_orientation_581/properties.json",
+    "success": true,
+    "objective": -6.713888024660954,
+    "error": null,
+    "n_grains": 1059,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5837",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5837.png",
+    "props": "simulations/runs/sim_orientation_5837/properties.json",
+    "success": true,
+    "objective": -7.59149460668514,
+    "error": null,
+    "n_grains": 280,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5933",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5933.png",
+    "props": "simulations/runs/sim_orientation_5933/properties.json",
+    "success": true,
+    "objective": -8.464460050881916,
+    "error": null,
+    "n_grains": 856,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5959",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5959.png",
+    "props": "simulations/runs/sim_orientation_5959/properties.json",
+    "success": true,
+    "objective": -4.740804528554884,
+    "error": null,
+    "n_grains": 294,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_5961",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_5961.png",
+    "props": "simulations/runs/sim_orientation_5961/properties.json",
+    "success": true,
+    "objective": -10.018319684817389,
+    "error": null,
+    "n_grains": 400,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6178",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6178.png",
+    "props": "simulations/runs/sim_orientation_6178/properties.json",
+    "success": true,
+    "objective": -8.02228786412633,
+    "error": null,
+    "n_grains": 803,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6271",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6271.png",
+    "props": "simulations/runs/sim_orientation_6271/properties.json",
+    "success": true,
+    "objective": -9.5386621411844,
+    "error": null,
+    "n_grains": 664,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6329",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6329.png",
+    "props": "simulations/runs/sim_orientation_6329/properties.json",
+    "success": true,
+    "objective": -9.018532037472697,
+    "error": null,
+    "n_grains": 694,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6347",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6347.png",
+    "props": "simulations/runs/sim_orientation_6347/properties.json",
+    "success": true,
+    "objective": -8.167935108751138,
+    "error": null,
+    "n_grains": 611,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6384",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6384.png",
+    "props": "simulations/runs/sim_orientation_6384/properties.json",
+    "success": true,
+    "objective": -9.588054873751163,
+    "error": null,
+    "n_grains": 1060,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6439",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6439.png",
+    "props": "simulations/runs/sim_orientation_6439/properties.json",
+    "success": true,
+    "objective": -8.847094815928287,
+    "error": null,
+    "n_grains": 455,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_650",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_650.png",
+    "props": "simulations/runs/sim_orientation_650/properties.json",
+    "success": true,
+    "objective": -6.100713983634229,
+    "error": null,
+    "n_grains": 826,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6573",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6573.png",
+    "props": "simulations/runs/sim_orientation_6573/properties.json",
+    "success": true,
+    "objective": -7.1558505343117975,
+    "error": null,
+    "n_grains": 671,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6639",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6639.png",
+    "props": "simulations/runs/sim_orientation_6639/properties.json",
+    "success": true,
+    "objective": -8.904711605550544,
+    "error": null,
+    "n_grains": 453,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6698",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6698.png",
+    "props": "simulations/runs/sim_orientation_6698/properties.json",
+    "success": true,
+    "objective": -8.043164595090799,
+    "error": null,
+    "n_grains": 723,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6814",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6814.png",
+    "props": "simulations/runs/sim_orientation_6814/properties.json",
+    "success": true,
+    "objective": -9.050821796718743,
+    "error": null,
+    "n_grains": 486,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6818",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6818.png",
+    "props": "simulations/runs/sim_orientation_6818/properties.json",
+    "success": true,
+    "objective": -8.19186630915392,
+    "error": null,
+    "n_grains": 450,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6874",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6874.png",
+    "props": "simulations/runs/sim_orientation_6874/properties.json",
+    "success": true,
+    "objective": -6.98011883642372,
+    "error": null,
+    "n_grains": 363,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_6983",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_6983.png",
+    "props": "simulations/runs/sim_orientation_6983/properties.json",
+    "success": true,
+    "objective": -6.8126166693332975,
+    "error": null,
+    "n_grains": 420,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_7024",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_7024.png",
+    "props": "simulations/runs/sim_orientation_7024/properties.json",
+    "success": true,
+    "objective": -8.554800840533607,
+    "error": null,
+    "n_grains": 553,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_705",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_705.png",
+    "props": "simulations/runs/sim_orientation_705/properties.json",
+    "success": true,
+    "objective": -7.558483643325837,
+    "error": null,
+    "n_grains": 554,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_7153",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_7153.png",
+    "props": "simulations/runs/sim_orientation_7153/properties.json",
+    "success": true,
+    "objective": -6.669082121704308,
+    "error": null,
+    "n_grains": 827,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_7371",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_7371.png",
+    "props": "simulations/runs/sim_orientation_7371/properties.json",
+    "success": true,
+    "objective": -4.71990691016318,
+    "error": null,
+    "n_grains": 453,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_849",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_849.png",
+    "props": "simulations/runs/sim_orientation_849/properties.json",
+    "success": true,
+    "objective": -6.224657121653676,
+    "error": null,
+    "n_grains": 761,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_896",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_896.png",
+    "props": "simulations/runs/sim_orientation_896/properties.json",
+    "success": true,
+    "objective": -7.291753642528304,
+    "error": null,
+    "n_grains": 888,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_96",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_96.png",
+    "props": "simulations/runs/sim_orientation_96/properties.json",
+    "success": true,
+    "objective": -6.399551922121878,
+    "error": null,
+    "n_grains": 693,
+    "old_success": true
+  },
+  {
+    "sim_id": "orientation_960",
+    "png": "rve/AZ31_extruded/AZ31_extruded_orientation_960.png",
+    "props": "simulations/runs/sim_orientation_960/properties.json",
+    "success": true,
+    "objective": -7.864392958171486,
+    "error": null,
+    "n_grains": 324,
+    "old_success": true
+  }
+]
