@@ -15,6 +15,8 @@ This repository holds the optimiser **O** and the closed-loop pipeline (Co-PiLOT
 | [microstructure-encoder-decoder](https://github.com/mahishguru/microstructure-encoder-decoder) | ViT encoder + FM-DiT decoder, the latent space D ([weights on 🤗](https://huggingface.co/mahishguru/microstructure-encoder-decoder)) |
 | **meridian** (this repo) | MERIDIAN, the baselines, the closed-loop pipeline and the automated DAMASK simulations, O |
 
+📦 **Training dataset of the decoder** (101,000 synthetic RVEs as codec-encoded orientation maps, from which the seed RVEs are drawn): [Zenodo record 23036836](https://zenodo.org/records/23036836) (DOI [10.5281/zenodo.23036836](https://doi.org/10.5281/zenodo.23036836), CC BY 4.0; files available on request through Zenodo)
+
 ## What is in this repository
 
 | Component | Where |
