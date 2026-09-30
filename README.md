@@ -4,7 +4,7 @@
 
 MERIDIAN searches the latent space of a generative model for designs that meet a target property tuple, here `(σ_y, n, K, σ_u)`. Each evaluation is an expensive physics simulation. A design run fits into 160 simulations (40 rounds × batch 4), warm-started from 100 pre-simulated seeds.
 
-This repository holds the optimiser **O** and the closed-loop pipeline (Co-PiLOT) of our physics-augmented inverse-design framework for extruded Mg. They are described in the Co-PiLOT NeurIPS 2026 paper (Method, E2, appendices) and the Acta Materialia paper (Secs. 6–8).
+This repository holds the optimiser **O** and the closed-loop pipeline (Co-PiLOT) of our physics-augmented inverse-design framework for extruded Mg. They are described in the Co-PiLOT paper ([arXiv:2609.37875](https://arxiv.org/abs/2609.37875)) (Method, E2, appendices) and the Acta Materialia paper (Secs. 6–8).
 
 <p align="center"><img src="docs/figures/framework.png" width="780" alt="Closed-loop inverse-design framework"></p>
 <p align="center"><em>The closed loop. A latent z is decoded by the flow-matching decoder D into an RGB orientation image. The orientation codec Ψ converts it into a DREAM.3D RVE, and DAMASK deforms that RVE in uniaxial tension. The objective J scores the extracted properties, and MERIDIAN (O) proposes the next latent batch.</em></p>
@@ -114,6 +114,21 @@ simulations/                # DAMASK inputs, drivers, example runs
 scripts/                    # campaign launchers, seed-cache tools, landscape study, grid design
 examples/                   # standalone MERIDIAN usage
 tests/                      # mock-pipeline tests for all optimisers; DAMASK end-to-end scripts
+```
+
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@article{guru2026copilot,
+  title   = {{Co-PiLOT}: Constrained Physics-Informed Latent Optimization for Target-Driven Inverse Design},
+  author  = {Guru, Mahish K. and Nagar, Mayank and Vyas, Ayush and Bohlen, Jan and Aydin, Roland and Ben Khalifa, Noomane},
+  journal = {arXiv preprint arXiv:2609.37875},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2609.37875},
+  url     = {https://arxiv.org/abs/2609.37875}
+}
 ```
 
 ## License
